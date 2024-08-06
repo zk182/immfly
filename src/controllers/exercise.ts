@@ -35,6 +35,7 @@ class ExerciseController {
 			return records;
 		} catch (error) {
 			console.error(`Fetch error: ${error}`);
+			throw error;
 		}
 	}
 

@@ -2,7 +2,7 @@ import express from 'express';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 
-// import errorHandler from './middlewares/errors.js';
+import errorHandler from './middlewares/errors';
 import routes from './routes/index';
 
 const app = express();
@@ -18,6 +18,6 @@ app.use(cookieParser());
 app.use('/api', express.json({ limit: '50kb' }), routes);
 
 // Error handler, must be called last
-// app.use(errorHandler);
+app.use(errorHandler);
 
 export default app;
