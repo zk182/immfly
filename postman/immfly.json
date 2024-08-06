@@ -1,1 +1,76 @@
-{}
+{
+	"info": {
+		"_postman_id": "adc0bbd1-5f57-44f3-83d5-afc3032a4908",
+		"name": "Immfly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27668836"
+	},
+	"item": [
+		{
+			"name": "Get Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3028/api/exercise/countries?order=asc",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3028",
+					"path": ["api", "exercise", "countries"],
+					"query": [
+						{
+							"key": "order",
+							"value": "asc"
+						},
+						{
+							"key": "filter",
+							"value": "lux",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reverse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3028/api/exercise/reverse/hello",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3028",
+					"path": ["api", "exercise", "reverse", "hello"]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Append",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3028/api/exercise/append?start=hello&end=bye",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3028",
+					"path": ["api", "exercise", "append"],
+					"query": [
+						{
+							"key": "start",
+							"value": "hello"
+						},
+						{
+							"key": "end",
+							"value": "bye"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
