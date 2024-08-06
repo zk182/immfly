@@ -13,6 +13,12 @@ NODE_ENV=prod
 SIMPLE_ARRAY="[1,2,3,4]"
 ```
 
+then run
+
+```
+npm i
+```
+
 # test
 
 ```
@@ -23,6 +29,19 @@ npm run test
 
 ```
 npm run dev
+```
+
+# docker
+
+
+```
+docker build -t immfly .   
+```
+
+then
+
+```
+docker run -p 3028:3028 immfly  
 ```
 
 # postman
