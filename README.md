@@ -2,7 +2,7 @@
 
 # install
 
-in root folder, create an .env with this structure
+in root folder, create an .env with [.env.example](.env.example) structure, you could copy 
 ```
 PRETTY_LOGS=1
 APP_NAME=immfly
@@ -22,7 +22,7 @@ npm run test
 # start
 
 ```
-docker compose up
+npm run dev
 ```
 
 # postman
