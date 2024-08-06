@@ -1,6 +1,7 @@
 import { ApiResponse, orderType } from '../models/exercise';
 import { request } from 'undici';
 import vowels from '../utils/vowels';
+import { ConfigurationError } from '../errors/index';
 
 class ExerciseController {
 	async getData(filter: string, order: orderType) {
@@ -54,7 +55,7 @@ class ExerciseController {
 
 	append(start: string, end: string) {
 		if (!process.env.SIMPLE_ARRAY) {
-			throw new Error('SIMPLE_ARRAY not set');
+			throw new ConfigurationError('SIMPLE_ARRAY not set');
 		}
 
 		let newArr: string[] = [];
@@ -62,7 +63,7 @@ class ExerciseController {
 		try {
 			newArr = JSON.parse(process.env.SIMPLE_ARRAY);
 		} catch (e) {
-			throw new Error('SIMPLE_ARRAY is not a valid JSON array');
+			throw new ConfigurationError('SIMPLE_ARRAY is not a valid JSON array');
 		}
 
 		if (start) {

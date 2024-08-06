@@ -3,6 +3,7 @@ import { Request, Response, NextFunction } from 'express';
 
 import { kCode, kErrorCode } from '../../errors/symbols';
 import { BadRequest, ResourceNotFound } from '../../errors/index';
+import logger from '../../libs/logger';
 
 const notFoundHandler = (req: Request, res: Response, next: NextFunction) =>
 	next(new ResourceNotFound());
@@ -13,6 +14,7 @@ const errorHandler = (
 	res: Response,
 	next: NextFunction
 ) => {
+	logger.error(err);
 	if (err instanceof ValidationError) {
 		return res.status(err.statusCode).json({
 			message: err.message,

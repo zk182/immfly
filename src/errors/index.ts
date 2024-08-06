@@ -4,3 +4,4 @@ export { default as Forbidden } from './forbidden';
 export { default as ResourceNotFound } from './not-found';
 export { default as TooManyRequests } from './too-many-requests';
 export { default as ValidationError } from './validation';
+export { default as ConfigurationError } from './configuration';
