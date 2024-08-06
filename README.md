@@ -1,6 +1,6 @@
-# immfly
+# Immfly
 
-# install
+# Install
 
 in root folder, create an .env with [.env.example](.env.example) structure, you could copy 
 ```
@@ -19,19 +19,19 @@ then run
 npm i
 ```
 
-# test
+# Test
 
 ```
 npm run test
 ```
 
-# start
+# Start
 
 ```
 npm run dev
 ```
 
-# docker
+# Docker
 
 
 ```
@@ -44,6 +44,6 @@ then
 docker run -p 3028:3028 immfly  
 ```
 
-# postman
+# Postman
 
 There's a postman collection in [postman/immfly.json](postman/immfly.json) for testing purposes
