@@ -5,11 +5,13 @@ import ExerciseController from '../../controllers/exercise';
 
 import { asyncHandler } from '../middlewares/utils';
 import { orderType } from '#src/models/exercise';
+import { appendValidation, countriesValidation } from '../../schemas/exercise';
 
 const ExerciseRouter = express.Router();
 
 ExerciseRouter.get(
 	'/countries',
+	validate(countriesValidation),
 	asyncHandler(async (req: Request, res: Response) => {
 		const filter = req.query.filter as string;
 		const order = req.query.order as orderType;
@@ -29,6 +31,7 @@ ExerciseRouter.get(
 
 ExerciseRouter.get(
 	'/append',
+	validate(appendValidation),
 	asyncHandler(async (req: Request, res: Response) => {
 		const start = req.query.start as string;
 		const end = req.query.end as string;

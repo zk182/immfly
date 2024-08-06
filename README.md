@@ -13,6 +13,12 @@ NODE_ENV=prod
 SIMPLE_ARRAY="[1,2,3,4]"
 ```
 
+# test
+
+```
+npm run test
+```
+
 # start
 
 ```
